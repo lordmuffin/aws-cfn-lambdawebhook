@@ -1,0 +1,26 @@
+machine:
+  environment:
+    CIRCLE_BUILD_DIR: $HOME/$CIRCLE_PROJECT_REPONAME
+    PATH: $PATH:$CIRCLE_BUILD_DIR/bin
+    UPLOAD: $HOME/upload
+    zipfile: $UPLOAD/$CIRCLE_PROJECT_REPONAME.zip
+
+    GO15VENDOREXPERIMENT: 1
+  post:
+    - mkdir -p $CIRCLE_BUILD_DIR/bin
+  #python:
+  #  version: 2.7
+
+dependencies:
+  pre:
+    - go get -v github.com/JacksonConsulting/s3up
+  cache_directories:
+    - bin
+test:
+  pre:
+      - bash ./lambdazip.sh
+deployment:
+  s3up:
+    branch: master
+    commands:
+      - s3up -source=$UPLOAD -bucket=$BUCKET
