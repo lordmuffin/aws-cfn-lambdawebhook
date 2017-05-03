@@ -4,6 +4,7 @@ machine:
     PATH: $PATH:$CIRCLE_BUILD_DIR/bin
     UPLOAD: $HOME/upload
     zipfile: $UPLOAD/$CIRCLE_PROJECT_REPONAME.zip
+    AWS_REGION: us-east-1
 
   post:
     - mkdir -p $CIRCLE_BUILD_DIR/bin
