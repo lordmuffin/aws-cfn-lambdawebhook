@@ -21,4 +21,4 @@ def handler(event, context):
     payload = {json.dumps(event)}
     headers = {'content-type': 'application/json'}
 
-    r = requests.post(url, data=json.dumps(payload), headers=headers, default=default)
+    r = requests.post(url, data=payload, headers=headers, default=default)
