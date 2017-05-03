@@ -7,6 +7,7 @@ import os
 import time
 import uuid
 import boto3
+import requests
 
 def handler(event, context):
     print "event.dump = " + json.dumps(event)
