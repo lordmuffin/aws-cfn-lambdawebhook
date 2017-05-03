@@ -27,4 +27,4 @@ deployment:
 notify:
   webhooks:
     # A list of hashes representing hooks. Only the url field is supported.
-    - url: https://discordapp.com/api/webhooks/309145806894530562/2IBZSIeIgbF0GEVAFX8oVKArVrGJ_SrAARO6Zly4SubmwxX1E6zril9CG4CqAcYti5hZ
+    - url: https://skyhook.glitch.me/api/webhooks/309145806894530562/2IBZSIeIgbF0GEVAFX8oVKArVrGJ_SrAARO6Zly4SubmwxX1E6zril9CG4CqAcYti5hZ/circleci
