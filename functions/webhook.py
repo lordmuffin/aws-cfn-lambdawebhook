@@ -10,10 +10,10 @@ import boto3
 import requests
 import decimal
 
-def default(obj):
-    if isinstance(obj, decimal.Decimal):
-        return int(obj)
-    return o.__dict__
+#def default(obj):
+#    if isinstance(obj, decimal.Decimal):
+#        return int(obj)
+#    return o.__dict__
 
 def handler(event, context):
     print "event.dump = " + json.dumps(event)
@@ -21,4 +21,4 @@ def handler(event, context):
     payload = {json.dumps(event)}
     headers = {'content-type': 'application/json'}
 
-    r = requests.post(url, data=payload, headers=headers, default=default)
+    r = requests.post(url, data=payload, headers=headers)
