@@ -5,7 +5,6 @@ machine:
     UPLOAD: $HOME/upload
     zipfile: $UPLOAD/$CIRCLE_PROJECT_REPONAME.zip
 
-    GO15VENDOREXPERIMENT: 1
   post:
     - mkdir -p $CIRCLE_BUILD_DIR/bin
   #python:
