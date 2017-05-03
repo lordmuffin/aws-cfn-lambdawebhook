@@ -17,8 +17,10 @@ import decimal
 
 def handler(event, context):
     print "event.dump = " + json.dumps(event)
+    data = json.loads(event['body'])
     url = 'https://discordapp.com/api/webhooks/308790391031726082/zGRwUsO66V6UXl4Vb8eg8lDZ2pE7eljfPMQLVF9lSJlytAoYOCDSSsi8wUe9F1shC2IJ/github'
-    payload = {json.dumps(event)}
+    #payload = {json.dumps(event)}
     headers = {'content-type': 'application/json'}
 
-    r = requests.post(url, data=payload, headers=headers)
+    r = requests.post(url, data=json.dumps(data['payload']))
+    print(r.text)
