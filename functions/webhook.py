@@ -19,8 +19,8 @@ def handler(event, context):
     print "event.dump = " + json.dumps(event)
     data = json.loads(event)
     url = data['webhookurl']
-    #payload = {json.dumps(event)}
+    payload = data['payload']
     headers = {'content-type': 'application/json'}
 
-    r = requests.post(url, data=json.dumps(data['payload']))
+    r = requests.post(url, data=json.dumps(payload))
     print(r.text)
