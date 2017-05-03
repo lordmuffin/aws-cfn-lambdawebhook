@@ -17,8 +17,8 @@ import decimal
 
 def handler(event, context):
     print "event.dump = " + json.dumps(event)
-    data = json.dumps(event)
-    url = json.loads(data['webhookurl'])
+    data = json.loads(event['body'])
+    url = data['webhookurl']
     payload = data['payload']
     headers = {'content-type': 'application/json'}
 
