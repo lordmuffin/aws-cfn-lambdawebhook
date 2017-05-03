@@ -26,5 +26,5 @@ deployment:
       - s3up --destination $CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH --bucket $BUCKET --strip 4 $UPLOAD/*
 notify:
   webhooks:
-    # A list of hook hashes, containing the URL field
-    - url: https://discordapp.com/api/webhooks/309145806894530562/2IBZSIeIgbF0GEVAFX8oVKArVrGJ_SrAARO6Zly4SubmwxX1E6zril9CG4CqAcYti5hZ/github
+    # A list of hashes representing hooks. Only the url field is supported.
+    - url: https://discordapp.com/api/webhooks/309145806894530562/2IBZSIeIgbF0GEVAFX8oVKArVrGJ_SrAARO6Zly4SubmwxX1E6zril9CG4CqAcYti5hZ
