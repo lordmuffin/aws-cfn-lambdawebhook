@@ -17,11 +17,11 @@ import decimal
 
 def handler(event, context):
     print "event.dump = " + json.dumps(event)
-    data = json.dump(event, data)
+    data = json.loads(event)
     print data
-    url = data['webhookurl']
-    payload = data['payload']
-    headers = {'content-type': 'application/json'}
-
-    r = requests.post(url, data=json.dumps(payload))
+    #url = data['webhookurl']
+    #payload = data['payload']
+    #headers = {'content-type': 'application/json'}
+#
+    #r = requests.post(url, data=json.dumps(payload))
     #print(r.text)
