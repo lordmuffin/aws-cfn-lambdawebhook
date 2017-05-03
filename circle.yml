@@ -23,4 +23,4 @@ deployment:
   s3up:
     branch: master
     commands:
-      - s3up -source=$UPLOAD -bucket=$BUCKET
+      - s3up -source=$UPLOAD -bucket=$BUCKET/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BUILD_DIR
